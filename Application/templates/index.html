@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Video Downloader</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Twitter Video Downloader
+                    </div>
+                    <div class="card-body">
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="alert alert-info" role="alert">
+                                <ul class="list-unstyled">
+                                {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        {% endwith %}
+                        <form action="/download" method="post" class="mb-3">
+                            <div class="input-group">
+                                <input type="text" name="url" class="form-control" placeholder="Paste Twitter video link here" required>
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">Download</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h2>Downloaded Videos</h2>
+                        <ul class="list-group">
+                        {% for file in files %}
+                            <li class="list-group-item"><a href="{{ url_for('static', filename='downloads/' ~ file) }}">{{ file }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted text-center">
+                        &copy; trfyrt 2024 | <a href="https://github.com/trfyrt" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
