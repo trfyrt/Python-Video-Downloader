@@ -3,23 +3,6 @@
 ## Description
 Twitter Video Downloader is a web application built using Flask and YouTube-DL that allows users to download videos from various social media platforms by entering the video URL. It provides a simple interface to fetch and save Twitter videos locally on the user's machine.
 
-## Installation
-To run this application locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/twitter-video-downloader.git
-   ```
-2. Navigate into the project directory:
-   ```bash
-   cd twitter-video-downloader
-   ```
-
-3. Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ## Requirements
 - Python 3.x
 - Flask
