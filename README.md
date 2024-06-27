@@ -11,14 +11,14 @@ To run this application locally, follow these steps:
    git clone https://github.com/your-username/twitter-video-downloader.git
    ```
 2. Navigate into the project directory:
-  ```bash
-  cd twitter-video-downloader
-  ```
+   ```bash
+   cd twitter-video-downloader
+   ```
 
 3. Install the required Python packages:
-  ```bash
-  pip install -r requirements.txt
-  ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Requirements
 - Python 3.x
@@ -27,9 +27,9 @@ To run this application locally, follow these steps:
 
 ## Usage
 1. Start the Flask application:
-  ```bash
-  python app.py
-  ```
+   ```bash
+   python app.py
+   ```
 
 2. Open your web browser and go to 'http://localhost:5000/index'.
 
